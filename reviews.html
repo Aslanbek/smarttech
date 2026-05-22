@@ -1,0 +1,93 @@
+<!-- 
+Лайфхаки по подготовке скриншотов для этой страницы:
+Размер и пропорции: Поскольку скриншоты телефонов (вертикальные) и официальные бланки А4 имеют совершенно разные пропорции, в коде слайдера я прописал object-fit: contain; и жестко ограничил высоту картинок до 380px. Браузер автоматически и аккуратно впишет любой ваш скриншот, ничего не обрезав и не растянув.
+
+Как называть файлы: Сохраняйте ваши скриншоты в папку assets/images/ под именами:
+
+review-blank-1.jpg (для официального письма на бланке)
+
+review-chat-1.jpg (для скриншота переписки из мессенджера)
+
+review-2gis.jpg (для скриншота из карт)
+
+Конфиденциальность: Если на скриншотах из WhatsApp видны личные номера телефонов или фамилии жителей (не председателя), перед загрузкой на сайт слегка замажьте или заблюрьте их в любом графическом редакторе на телефоне. Это подчеркнет вашу профессиональность в отношении защиты данных.
+-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы и благодарственные письма клиентов — SMART TECHNOLOGY</title>
+    <meta name="description" content="Отзывы председателей ОСИ, управляющих компаний и владельцев коммерческой недвижимости о сервисе SMART TECHNOLOGY в Астане. Официальные благодарственные письма.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+    <header class="site-header"></header>
+
+    <section class="hero-section" style="background: linear-gradient(135deg, rgba(0,43,91,0.95) 0%, rgba(15,23,42,0.85) 100%), url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200') no-repeat center center/cover; padding: 80px 0;">
+        <div class="container">
+            <span class="hero-subtitle">Репутация, подтвержденная делом</span>
+            <h1>Отзывы наших клиентов</h1>
+            <p>Официальные благодарственные письма от ОСИ, КСК и управляющих компаний бизнес-центров Астаны, а также обратная связь от жильцов.</p>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title" style="margin-bottom: 10px;">Что о нас говорят</h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 5px;">Мы гордимся своей работой и не скрываем результаты.</p>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">Ниже представлены реальные скриншоты благодарностей и отзывов.</p>
+
+            <div class="swiper mySwiper" style="width: 100%; max-width: 700px; height: auto; min-height: 450px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin: 0 auto; background: #fff; padding-bottom: 40px;">
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; background: #fafafa;">
+                        <img src="/assets/images/review-blank-1.jpg" alt="Благодарственное письмо от ОСИ" style="max-width: 100%; max-height: 380px; object-fit: contain; border: 1px solid #e2e8f0; border-radius: 6px;">
+                        <p style="margin-top: 15px; font-size: 14px; color: var(--primary-blue); font-weight: 600; text-align: center;">Официальный отзыв председателя ЖК (Алматинский р-н)</p>
+                    </div>
+
+                    <div class="swiper-slide" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; background: #fafafa;">
+                        <img src="/assets/images/review-chat-1.jpg" alt="Скриншот отзыва из WhatsApp чата" style="max-width: 100%; max-height: 380px; object-fit: contain; border: 1px solid #e2e8f0; border-radius: 6px;">
+                        <p style="margin-top: 15px; font-size: 14px; color: var(--primary-blue); font-weight: 600; text-align: center;">Благодарность от жителей в общедомовом WhatsApp-чате за быструю ликвидацию аварии ХВС</p>
+                    </div>
+
+                    <div class="swiper-slide" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; background: #fafafa;">
+                        <img src="/assets/images/review-2gis.jpg" alt="Отзыв из 2ГИС" style="max-width: 100%; max-height: 380px; object-fit: contain; border: 1px solid #e2e8f0; border-radius: 6px;">
+                        <p style="margin-top: 15px; font-size: 14px; color: var(--primary-blue); font-weight: 600; text-align: center;">Обратная связь на платформе 2ГИС Астана от управляющего БЦ</p>
+                    </div>
+
+                </div>
+                
+                <div class="swiper-button-next" style="color: var(--primary-blue); right: 20px;"></div>
+                <div class="swiper-button-prev" style="color: var(--primary-blue); left: 20px;"></div>
+                <div class="swiper-pagination" style="bottom: 10px;"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="about-brief" style="background-color: var(--light-bg); padding: 60px 0;">
+        <div class="container" style="text-align: center; max-width: 800px;">
+            <h2 style="font-family: var(--font-headers); color: var(--primary-blue); margin-bottom: 20px;">Каждый отзыв — это результат тяжелой работы</h2>
+            <p style="font-size: 16px; line-height: 1.6; color: var(--text-main);">
+                Мы понимаем, что замена сервисной компании — это стресс для руководства объекта. Поэтому мы готовы предоставить прямые контакты председателей действующих ЖК, находящихся у нас на обслуживании, чтобы вы могли лично запросить у них устные рекомендации. Мы работаем честно и открыто.
+            </p>
+        </div>
+    </section>
+
+    <footer class="site-footer"></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/js/include.js"></script>
+    <script src="/js/forms.js"></script>
+    <script src="/js/slider.js"></script>
+</body>
+</html>

@@ -1,0 +1,544 @@
+/* Переменные темы - Сине-голубой Hi-Tech */
+:root {
+    --primary-blue: #002b5b;   /* Deep Navy */
+    --cyan-tech: #00b4d8;      /* Neon Cyan */
+    --dark-bg: #0f172a;        /* Graphite dark */
+    --light-bg: #f8fafc;
+    --text-main: #334155;
+    --text-muted: #64748b;
+    --font-headers: 'Poppins', sans-serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+/* Базовый сброс стилей */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-main);
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: var(--font-headers);
+}
+
+.btn-primary {
+    background-color: var(--cyan-tech);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #0096b4;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #ffffff;
+    color: var(--primary-blue);
+}
+
+/* Кнопка Диспетчер */
+.btn-emergency {
+    border: 2px solid var(--cyan-tech);
+    color: var(--cyan-tech);
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-emergency:hover {
+    background-color: var(--cyan-tech);
+    color: #ffffff;
+}
+
+/* Сама шапка */
+.site-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+/* Флекс-контейнер шапки */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Раскидывает лого, меню и контакты по ширине */
+    gap: 20px; /* Минимальный зазор между блоками, чтобы они не слипались */
+}
+
+/* Логотип */
+.logo-area {
+    display: flex;
+    flex-direction: column;
+    min-width: 180px; /* Чтобы лого не сжимался */
+}
+
+.logo-text {
+    font-family: var(--font-headers);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+.logo-text span {
+    color: var(--cyan-tech);
+}
+
+.logo-sub {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+}
+
+/* Главная навигация */
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Задаем одинаковые, аккуратные отступы между пунктами */
+}
+
+.main-nav li {
+    white-space: nowrap; /* ЗАПРЕЩАЕМ пункт "О компании" переноситься на 2 строки */
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-family: var(--font-headers);
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.main-nav a:hover, 
+.main-nav a.active {
+    color: var(--cyan-tech);
+}
+
+/* Выпадающее меню */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: none !important;
+    flex-direction: column;
+    min-width: 200px;
+    padding: 10px 0;
+    border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: flex !important;
+}
+
+.dropdown-menu a {
+    padding: 10px 20px;
+    display: block;
+}
+
+/* Блок контактов справа (телефон + кнопка) */
+.header-contacts {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Отступ между телефоном и кнопкой */
+    white-space: nowrap; /* Запрещаем перенос телефона */
+    margin-left: auto; /* Прижимает контакты к правому краю, если меню короткое */
+}
+
+/* Кликабельный телефон */
+.phone-link {
+    color: var(--primary-blue);
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Отступ между иконкой трубки и цифрами */
+    transition: color 0.3s ease;
+}
+
+.phone-link:hover {
+    color: var(--cyan-tech);
+}
+
+/* ГЛАВНЫЙ ЭКРАН */
+.hero-section {
+    background: linear-gradient(135deg, rgba(0,43,91,0.95) 0%, rgba(15,23,42,0.85) 100%), url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200') no-repeat center center/cover;
+    padding: 140px 0;
+    color: #ffffff;
+}
+
+.hero-container {
+    max-width: 800px;
+}
+
+.hero-subtitle {
+    color: var(--cyan-tech);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.hero-section h1 {
+    font-family: var(--font-headers);
+    font-size: 46px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #e2e8f0;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+}
+
+/* ЦИФРЫ О КОМПАНИИ */
+.about-brief {
+    padding: 80px 0;
+    background-color: var(--light-bg);
+}
+
+.brief-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.brief-text h2 {
+    font-family: var(--font-headers);
+    font-size: 32px;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+}
+
+.brief-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background-color: #ffffff;
+    padding: 25px 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    border-bottom: 4px solid var(--cyan-tech);
+}
+
+.stat-num {
+    display: block;
+    font-size: 36px;
+    font-family: var(--font-headers);
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 5px;
+}
+
+.stat-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* СЕТКА УСЛУГ */
+.services-section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-family: var(--font-headers);
+    font-size: 32px;
+    text-align: center;
+    color: var(--primary-blue);
+    margin-bottom: 5px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 5px;
+}
+
+.service-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 40px 30px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,43,91,0.08);
+    border-color: var(--cyan-tech);
+}
+
+.card-icon {
+    font-size: 40px;
+    color: var(--cyan-tech);
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-family: var(--font-headers);
+    color: var(--primary-blue);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: var(--cyan-tech);
+    font-weight: 600;
+}
+
+/* ФОРМА ЗАХВАТА */
+.form-section {
+    background-color: var(--primary-blue);
+    color: #ffffff;
+    padding: 80px 0;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 45% 50%;
+    gap: 5%;
+    align-items: center;
+}
+
+.form-info h2 {
+    font-family: var(--font-headers);
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.form-info p {
+    color: #cbd5e1;
+}
+
+.form-wrapper {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    color: var(--text-main);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: var(--font-body);
+}
+
+.btn-submit {
+    background-color: #25d366; /* Зеленый цвет WhatsApp */
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+}
+
+.btn-submit:hover {
+    background-color: #20ba56;
+}
+
+/* ПОДВАЛ */
+.site-footer {
+    background-color: var(--dark-bg);
+    color: #cbd5e1;
+    padding: 60px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-grid h4 {
+    color: #ffffff;
+    font-family: var(--font-headers);
+    margin-bottom: 20px;
+}
+
+.footer-grid ul {
+    list-style: none;
+}
+
+.footer-grid ul li {
+    margin-bottom: 10px;
+}
+
+.footer-grid a {
+    color: #cbd5e1;
+    text-decoration: none;
+}
+
+.footer-grid a:hover {
+    color: var(--cyan-tech);
+}
+
+.footer-about .logo-text {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #334155;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* МЕДИА-ЗАПРОСЫ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ */
+@media (max-width: 992px) {
+    .main-nav, .header-contacts .btn-emergency { display: none; }
+    .brief-container, .form-container, .footer-grid { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .hero-section h1 { font-size: 32px; }
+    .hero-actions { flex-direction: column; }
+}
+
+/* Кастомизация точек пагинации Swiper под бренд SMART TECHNOLOGY */
+.swiper-pagination-bullet-active {
+    background: var(--cyan-tech) !important;
+    width: 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 24px !important;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   АДАПТИВНОСТЬ ДЛЯ СТРАНИЦЫ ABOUT
+   ========================================================================== */
+
+/* Базовое состояние для компьютеров */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Две равные колонки по умолчанию */
+    gap: 40px;
+    align-items: start;
+}
+
+.blue-principles-card {
+    background-color: var(--primary-blue);
+    color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 43, 91, 0.1);
+}
+
+/* МЕДИА-ЗАПРОС ДЛЯ СМАРТФОНОВ (Экран меньше 768px) */
+@media (max-width: 768px) {
+    /* Переводим сетку в одну колонку */
+    .about-grid {
+        grid-template-columns: 1fr; 
+        gap: 30px;
+    }
+    
+    /* Делаем внутренние отступы в синей карточке чуть меньше, чтобы сберечь место */
+    .blue-principles-card {
+        padding: 25px;
+    }
+    
+    /* Заодно адаптируем шапку, чтобы элементы не вываливались */
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .header-contacts {
+        margin-left: 0;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .main-nav ul {
+        flex-wrap: wrap; /* Разрешаем пунктам меню переноситься, если они не лезут в ряд */
+        justify-content: center;
+        gap: 15px;
+    }
+}
